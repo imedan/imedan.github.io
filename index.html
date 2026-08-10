@@ -90,6 +90,35 @@
 									This work was recently published in AJ (<a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260719501M/abstract" target="_blank" style="color: #D8D9D9">Medan et al. (2026)</a>) and the code 
 									for this frame work in publicly available on <a href="https://github.com/imedan/snc_sf" target="_blank" style="color: #D8D9D9">GitHub</a>.
 								</p>
+								<h4 class="major">Stellar Parameters from BOSS Spectra</h4>
+								<p>
+									Large spectroscopic surveys require robust pipelines capable of inferring stellar parameters over a wide range of 
+									the Hertzsprung-Russell (HR) diagram from data of varying quality. SDSS-V is one such survey, where the data 
+									from the lower-resolution, optical BOSS spectrograph will provide a large dataset covering a wide range of Galactic 
+									stellar populations. To better analyze these data, we developed BOSS-CLAM, a generative, forward modeling pipeline for 
+									inferring effective temperature, surface gravity, metallicity, and  α−abundance. 
+									from continuum-normalized BOSS spectra. BOSS-CLAM maps stellar labels to Non-negative Matrix Factorization (NMF) basis 
+									vector weights via a polynomial mapping jointly optimized with the spectral decomposition, which provides a more flexible 
+									framework for working with the lower-resolution BOSS data. Additionally, training labels are drawn from four complementary 
+									sources (ASPCAP, BOSS-MINESweeper, wide binaries, and a hot star validation sample), which enables coverage from cool 
+									M dwarfs through hot OB stars, and across a wide range of metallicity.
+								</p>
+								<p>
+									We find that this flexible, generative model is capable of inferring stellar parameters in our testing set with relatively low scatter 
+									and with significantly less systematic biases than other methods. The below plot shows the inferred results from the testing set compared to 
+									their true values. This demonstrates the high accuracy and precision of the method over a wide range of parameter space.
+								</p>
+								<span><img  style="width:100%" src="images/clam_compare_results.png" alt=""/></span>
+								<p>
+									Additionally, the results of the model have been extensively validated on external datasets. One example is with clusters observed in SDSS-V. For example,
+									the below shows the BOSS-CLAM parameters for M67 (left) as compared to BOSSNet (right). While the scatter is generally larger as compared to BOSSNet, the large systematic errors
+									in the metallicity from BOSSNet are not present in the BOSS-CLAM results.
+								</p>
+								<span><img  style="width:100%" src="images/M67_validation.png" alt=""/></span>
+								<p>
+									The work can be accessed on (<a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260722822M/abstract" target="_blank" style="color: #D8D9D9">arXiv</a>) and the code 
+									for this method in publicly available on <a href="https://github.com/andycasey/clam-boss" target="_blank" style="color: #D8D9D9">GitHub</a>.
+								</p>
 								<h2 class="major">Graduate Research</h2>
 								<h4 class="major">Bayesian Cross-Matching</h4>
 								<p>During my first year, I have developed a Bayesian cross-matching method to match high proper motion stars from Gaia DR2 and SUPERBLINK to photometric catalogs spanning the UV to the infrared (such as GALEX, SDSS, Pan-STARRS, RAVE, 2MASS and AllWISE). To associate objects across these catalogs that differ in accuracy and magnitude limit, I compare the multidimensional (astrometry+photometry) distribution of all sources in the vicinity of each high proper motion star ("true" distribution) to a reference distribution of random field stars obtained by extracting all sources in a region on the sky displaced 2’ from the high proper motion star ("field" distribution). The 2’ offset preserves the local field stellar density and magnitude distribution, which allows us to characterize the local frequency of chance alignments, and calculate Bayesian statistics for each match. The two panel below shows such distributions, where the left panel shows the true distribution and the right panel the field distribution. It can be seen that the distribution of random field stars (the field distribution) is a component of the true distribution. Because of this, the subtraction of the field from the true distribution will reveal the distribution of actual matches that can be used to calculate Bayesian probabilities. My resulting high Bayesian probability photometry catalog has been shown to return a higher percent of matches then the internal Gaia DR2 cross-match, especially for Pan-STARRS where I have a match rate of ~98% within the footprint of the survey as compared to ~21% for the internal Gaia match. I have presented this work at the 235th AAS meeting, where more details can be found (<a href="https://www.dropbox.com/s/mymh81zafq481ve/AAS_235_Poster_final.pdf?dl=0" target="_blank" style="color: #D8D9D9">poster</a> and <a href="https://ui.adsabs.harvard.edu/abs/2020AAS...23527305M/abstract" target="_blank" style="color: #D8D9D9">abstract</a>). Also, this work has been accepted for publication in <a href="https://arxiv.org/abs/2102.10210" target="_blank" style="color: #D8D9D9">The Astronomical Journal</a>.</p>
