@@ -46,17 +46,50 @@
 								<p>My name is Ilija Medan and I am a Postdoctoral Fellow at the Canadian Institute for Theoretical Astrophysics (University of Toronto) under the advisement of Dr. Juna Kollmeier. 
 									Generally, I am interested in population studies of low-mass stars in the Solar Neighborhood using data from large astronomical surveys (Gaia, SDSS, 2MASS, Pan-STARRS, etc.). 
 								    My work focuses on using statstical methods to understand the frequency and distribution of low-mass field stars and binaries as a function of chemistry, kinemtics and 
-								    Galactic population. </p>
+								    Galactic population. Much of my ongoing work makes use of results from <a href="https://www.sdss.org/" target="_blank" style="color: #D8D9D9">SDSS-V</a>.</p>
 
-								<p>Outside of my research work, I also serve as the FPS Design Implementation Lead for SDSS-V. Through this position, I am the main contributor to the software package <a href="https://github.com/sdss/mugatu" target="_blank" style="color: #D8D9D9">mugatu</a>, which validates planned SDSS-V observations based on a number of science and observing requirements, and then loads these planned observations into a targeting database so they can be accessed at the telescope.</p>
+								<p>Outside of my research work, I also have multiple roles within SDSS-V. I am the co-chair of the Solar Neighborhood Census working group, where I help organize working calls, 
+									scientific projects and targeting for the survey. I also serve as the FPS Design Implementation Lead for SDSS-V. Through this position, I am the main contributor to the software package 
+									<a href="https://github.com/sdss/mugatu" target="_blank" style="color: #D8D9D9">mugatu</a>, 
+									which validates planned SDSS-V observations based on a number of science and observing requirements, 
+									and then loads these planned observations into a targeting database so they can be accessed at the telescope. Finally, I have recently joined the SDSS-V 
+									<a href="https://sdss-astra.readthedocs.io/en/latest/" target="_blank" style="color: #D8D9D9">astra</a> team. In this role, I am actively developing the software to 
+								    run the various data analysis pipelines, interface with the scientific working group leads to improve and validate astra outputs, and run the framework to create products for 
+								    internal use and public data releases.</p>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
-								<h2 class="major">Pre-Graduate Research</h2>
-								<p>After receiving my B.S. in Mechanical Engineering, with a minor in Physics, from Santa Clara University, I worked at the SOFIA Science Center as a research assistant for first Dr. Ravi Sankrit and then Dr. B-G Andersson. With Dr. Sankrit I used HST images of Kepler's Supernova Remnant in order to catalog and study the evolution of the bright, radiative knots, and the stellar properties (color and proper motion) of the stars in the field (230th AAS <a href="images/AAS_Kepler_Poster_Final.pdf" target="_blank" style="color: #D8D9D9">poster</a> and <a href="http://adsabs.harvard.edu/abs/2017AAS...23031812M" target="_blank" style="color: #D8D9D9">abstract</a>). </p>
-								<span><img  style="width:100%" src="images/bsin_w_model_no_tau.jpg" alt="" /></span>
-								<p>With Dr. Andersson I studied the variations in grain alignment in the wall of the Local Bubble using archival polarimetry, photometry and spectroscopy (231st AAS <a href="images/Local_Bubble_Poster_Draft_2.png" target="_blank" style="color: #D8D9D9">poster</a> and <a href="http://adsabs.harvard.edu/abs/2018AAS...23124713M" target="_blank" style="color: #D8D9D9">abstract</a>). The plot above shows a proxy for grain alignment efficiency vs. galactic longitude for the observed grain alignment efficiency in the wall of the Local Bubble (data points). The solid line shown in the plot is the strength of the radiation field from the nearby OB associations at the distance of the Local Bubble wall. As it can be seen, there is a strong correlation between the observed grain alignment efficiency and the nearby radiation field, which supports radiatively driven grain alignment. Additionally with Dr. Andersson, I preformed radiaitve transfer modeling of the circumstellar envelope of the carbon-rich AGB star IRC +10216.</p>
+								<h2 class="major">Recent Work</h2>
+								<h4 class="major">Selection Function for Solar Neighborhood Census</h4>
+								<p>
+									The Solar Neighborhood Census (SNC) from SDSS-V provides an exquiste dataset to study the local population of stars, and how they vary with e.g., metallicity, age and Galactic population. 
+									However, due to competing observing programs and fiber assignment constraints, the resulting sample carries severe and 
+									complex selection effects. In this work, I developed a framework to characterize the selection function of the SDSS-V SNC relative 
+									to the Gaia Catalog of Nearby Stars (GCNS), along with a forward modeling method to infer the properties of stellar 
+									subpopulations across the GCNS-defined 100 pc sample. The selection function is based on a method that models the 
+									selection probability as a function of sky position, Gaia G magnitude, and BP − RP . The resulting detection probabilities 
+									faithfully reproduce the known survey planning logic. The method further introduces the concept of a “subpopulation probability"; a 
+									grid of posterior estimates across the Hertzsprung-Russell (HR) diagram representing the likelihood that a GCNS member belongs 
+									to a given SDSS-V defined subpopulation. With this method, we can charazterize volume complete subpopulations of stars jointly informed by 
+									SDSS-V and Gaia data.
+								</p>
+								<p>
+									For example, we can use the optical BOSS spectra of SDSS-V to identify chromospherically active low-mass stars. With the above method, we can 
+									determine which stars in the GCNS likely belong to this subpopulation and examine the fraction of active stars across the HR diagram, as shown below. Here 
+									we see a clear increase in the detection of active stars as we go to lower masses.
+								</p>
+								<span><img  style="width:100%" src="images/forward_mod_compare_Ms.png" alt=""/></span>
+								<p>
+									Additionally, the method can be used to probe the true stellar density of stars as a function of metallicity and mass. Here we see a possible change in slope of the 
+									mass function as we decrease in metallicity of the subpopulation. This result serves as an important initial input for an analysis that seeks to determine the true 
+									initial mass function of low-mass stars as a function of metallicity.
+								</p>
+								<span><img  style="width:100%" src="images/mf_all.png" alt=""/></span>
+								<p>
+									This work was recently published in AJ (<a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260719501M/abstract" target="_blank" style="color: #D8D9D9">Medan et al. (2026)</a>) and the code 
+									for this frame work in publicly available on <a href="https://github.com/imedan/snc_sf" target="_blank" style="color: #D8D9D9">GitHub</a>.
+								</p>
 								<h2 class="major">Graduate Research</h2>
 								<h4 class="major">Bayesian Cross-Matching</h4>
 								<p>During my first year, I have developed a Bayesian cross-matching method to match high proper motion stars from Gaia DR2 and SUPERBLINK to photometric catalogs spanning the UV to the infrared (such as GALEX, SDSS, Pan-STARRS, RAVE, 2MASS and AllWISE). To associate objects across these catalogs that differ in accuracy and magnitude limit, I compare the multidimensional (astrometry+photometry) distribution of all sources in the vicinity of each high proper motion star ("true" distribution) to a reference distribution of random field stars obtained by extracting all sources in a region on the sky displaced 2’ from the high proper motion star ("field" distribution). The 2’ offset preserves the local field stellar density and magnitude distribution, which allows us to characterize the local frequency of chance alignments, and calculate Bayesian statistics for each match. The two panel below shows such distributions, where the left panel shows the true distribution and the right panel the field distribution. It can be seen that the distribution of random field stars (the field distribution) is a component of the true distribution. Because of this, the subtraction of the field from the true distribution will reveal the distribution of actual matches that can be used to calculate Bayesian probabilities. My resulting high Bayesian probability photometry catalog has been shown to return a higher percent of matches then the internal Gaia DR2 cross-match, especially for Pan-STARRS where I have a match rate of ~98% within the footprint of the survey as compared to ~21% for the internal Gaia match. I have presented this work at the 235th AAS meeting, where more details can be found (<a href="https://www.dropbox.com/s/mymh81zafq481ve/AAS_235_Poster_final.pdf?dl=0" target="_blank" style="color: #D8D9D9">poster</a> and <a href="https://ui.adsabs.harvard.edu/abs/2020AAS...23527305M/abstract" target="_blank" style="color: #D8D9D9">abstract</a>). Also, this work has been accepted for publication in <a href="https://arxiv.org/abs/2102.10210" target="_blank" style="color: #D8D9D9">The Astronomical Journal</a>.</p>
@@ -72,6 +105,10 @@
 								<span><img  style="width:100%" src="images/xmix_vs_U_heat_map_w_labels.png" alt=""/></span>
 								<br>
 								<p>To test this, I developed a method to estimate the age distribution of subpopulations of stars. In this method, I use GALAH data to define probability distributions of W versus [M/H] in age bins of 2 Gyr and determine optimal age distributions as the best-fitting weighted sum of these distributions. This process is then validated using the GALAH subset. I then estimated the probable age distribution for regions in the kinematic plane, where I found significant substructure that is correlated with the kinematic groups. Most notably, I found an age gradient across the Hercules streams that is correlated with birth radius. This work is published in <a href="https://academic.oup.com/mnras/article/521/1/208/7031760" target="_blank" style="color: #D8D9D9">MNRAS</a>, and the age and birth radii distributions, along with the code to reproduce them, can be found <a href="https://github.com/imedan/chemo_dyn_ages" target="_blank" style="color: #D8D9D9">here</a>.</p>
+								<h2 class="major">Pre-Graduate Research</h2>
+								<p>After receiving my B.S. in Mechanical Engineering, with a minor in Physics, from Santa Clara University, I worked at the SOFIA Science Center as a research assistant for first Dr. Ravi Sankrit and then Dr. B-G Andersson. With Dr. Sankrit I used HST images of Kepler's Supernova Remnant in order to catalog and study the evolution of the bright, radiative knots, and the stellar properties (color and proper motion) of the stars in the field (230th AAS <a href="images/AAS_Kepler_Poster_Final.pdf" target="_blank" style="color: #D8D9D9">poster</a> and <a href="http://adsabs.harvard.edu/abs/2017AAS...23031812M" target="_blank" style="color: #D8D9D9">abstract</a>). </p>
+								<span><img  style="width:100%" src="images/bsin_w_model_no_tau.jpg" alt="" /></span>
+								<p>With Dr. Andersson I studied the variations in grain alignment in the wall of the Local Bubble using archival polarimetry, photometry and spectroscopy (231st AAS <a href="images/Local_Bubble_Poster_Draft_2.png" target="_blank" style="color: #D8D9D9">poster</a> and <a href="http://adsabs.harvard.edu/abs/2018AAS...23124713M" target="_blank" style="color: #D8D9D9">abstract</a>). The plot above shows a proxy for grain alignment efficiency vs. galactic longitude for the observed grain alignment efficiency in the wall of the Local Bubble (data points). The solid line shown in the plot is the strength of the radiation field from the nearby OB associations at the distance of the Local Bubble wall. As it can be seen, there is a strong correlation between the observed grain alignment efficiency and the nearby radiation field, which supports radiatively driven grain alignment. Additionally with Dr. Andersson, I preformed radiaitve transfer modeling of the circumstellar envelope of the carbon-rich AGB star IRC +10216.</p>
 							</article>
 
 						<!-- About -->
